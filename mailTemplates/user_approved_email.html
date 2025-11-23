@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Account Has Been Approved</title>
+</head>
+
+<body style="margin:0; padding:0; background:#f3f4f6; font-family:system-ui,Segoe UI,Roboto,Arial;">
+  <div style="max-width:720px; margin:24px auto; background:#ffffff; padding:24px; border-radius:12px;">
+
+    <!-- Logo -->
+    <div style="text-align:center; margin-bottom:20px;">
+      <img src="./profile.png" alt="Logo"
+           style="width:84px; height:84px; border-radius:12px; object-fit:cover;" />
+    </div>
+
+    <!-- Title -->
+    <h2 style="color:#0b1220; font-size:24px; margin-bottom:16px; text-align:center;">
+      Your Account is Approved 🎉
+    </h2>
+
+    <!-- Body -->
+    <p style="font-size:16px; color:#374151;">
+      Hello <strong>{{USER_NAME}}</strong>,
+    </p>
+
+    <p style="font-size:16px; color:#374151;">
+      Great news! Your account has been approved by the admin team.  
+      You can now sign in and access all the available features.
+    </p>
+
+    <!-- Button -->
+    <div style="text-align:center; margin:28px 0;">
+      <a href="{{APPROVE_URL}}"
+         style="display:inline-block; padding:12px 20px; background:#2C3EFA; color:#ffffff;
+         text-decoration:none; border-radius:8px; font-size:16px;">
+        Sign in to your account
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <p style="font-size:13px; color:#6b7280; text-align:center;">
+      If you didn’t request this, please contact our support team.
+    </p>
+
+  </div>
+</body>
+</html>

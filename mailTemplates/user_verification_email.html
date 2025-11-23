@@ -1,0 +1,53 @@
+<!-- user_verification_email.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width"/>
+  <title>Verify your email</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial; background:#f3f5f8; margin:0; padding:18px; color:#111; }
+    .card { max-width:600px; margin:24px auto; background:white; border-radius:10px; overflow:hidden; box-shadow:0 10px 30px rgba(16,24,40,0.06); }
+    .top { padding:18px; display:flex; gap:14px; align-items:center; border-bottom:1px solid #eef0f3; }
+    .logo { width:56px; height:56px; border-radius:8px; object-fit:cover; }
+    .headline { margin:0; font-size:18px; color:#0f1724; }
+    .content { padding:22px; }
+    .lead { font-size:16px; margin:0 0 12px 0; color:#334155; }
+    .cta { text-align:center; margin:18px 0; }
+    .btn { background:#DCFCE7; color:#15803d; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:700; display:inline-block; }
+    .small { color:#667085; font-size:13px; }
+    .footer { padding:16px; font-size:12px; color:#8b98a8; border-top:1px solid #eef2f7; background:#fcfdff; text-align:center; }
+    .pre { font-family:monospace; background:#f8fafc; padding:8px 10px; border-radius:6px; display:inline-block; color:#0b1220; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <img src="./profile.png" alt="Logo" class="logo" />
+      <div>
+        <p class="headline">Verify your email for {{appName}}</p>
+        <p class="small">Secure your account by confirming your address</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <p class="lead">Hello <strong>{{userName}}</strong>,</p>
+
+      <p>Please confirm your email address to complete the registration for <strong>{{appName}}</strong>. Click the button below to verify your email. The link will expire in {{tokenTtl}} minutes.</p>
+
+      <div class="cta">
+        <a class="btn" href="{{verifyUrl}}">Verify my email</a>
+      </div>
+
+      <p class="small">If the button above doesn't work, copy and paste this link into your browser:</p>
+      <p class="pre">{{verifyUrl}}</p>
+
+      <p style="margin-top:16px;" class="small">If you did not create an account, you can ignore this email.</p>
+    </div>
+
+    <div class="footer">
+      Need help? Contact <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>
+    </div>
+  </div>
+</body>
+</html>
