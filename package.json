@@ -36,8 +36,10 @@
     "@types/express": "^5.0.5",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/multer": "^2.0.0",
+    "@types/node": "^24.10.1",
     "@types/nodemailer": "^7.0.4",
     "@types/pino": "^7.0.4",
-    "pino-pretty": "^13.1.2"
+    "pino-pretty": "^13.1.2",
+    "typescript": "^5.9.3"
   }
 }

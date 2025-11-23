@@ -1816,3 +1816,5 @@
 {"level":30,"time":"2025-11-23T13:45:55.524Z","method":"GET","url":"/auth/admin/pending-users","status":304,"responseTime":"231ms","msg":"HTTP GET /auth/admin/pending-users"}
 {"level":30,"time":"2025-11-23T13:46:08.459Z","msg":"User logged out"}
 {"level":30,"time":"2025-11-23T13:46:08.460Z","method":"POST","url":"/auth/logout","status":200,"responseTime":"7ms","msg":"HTTP POST /auth/logout"}
+{"level":30,"time":"2025-11-23T14:06:27.465Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-23T14:06:27.466Z","msg":"Log retention cleanup complete."}
