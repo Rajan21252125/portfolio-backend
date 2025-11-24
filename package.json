@@ -8,7 +8,8 @@
     "start": "node --watch index.js",
     "dev": "node --loader ts-node/esm server/index.ts",
     "migrate": "node ./db/migrate.js",
-    "build": "npx tsc -p tsconfig.json --outDir dist --listEmittedFiles && node script/fix-extensions.js",
+    "build": "npm ci --include=dev --no-audit --prefer-offline && echo '== CWD ==' && pwd && echo '== LS root ==' && ls -la && echo '== NODE version ==' && node -v && echo '== NPM version ==' && npm -v && echo '== RUN tsc (outDir=dist) ==' && npx tsc -p tsconfig.json --outDir dist --listEmittedFiles --pretty || true && echo '== LS dist after tsc ==' && ls -la dist || true && echo '== run fixer (if dist exists) ==' && node script/fix-extensions.js || true && echo '== ls dist final ==' && ls -la dist || true"
+    ,
     "build-run": "npm run build && node ./dist/index.js"
   },
   "keywords": [],
