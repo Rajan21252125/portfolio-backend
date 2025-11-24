@@ -8,7 +8,7 @@
     "start": "node --watch index.js",
     "dev": "node --loader ts-node/esm server/index.ts",
     "migrate": "node ./db/migrate.js",
-    "build": "tsc -p tsconfig.json && node script/fix-extensions.js",
+    "build": "npx tsc -p tsconfig.json --outDir dist --listEmittedFiles && node script/fix-extensions.js",
     "build-run": "npm run build && node ./dist/index.js"
   },
   "keywords": [],
