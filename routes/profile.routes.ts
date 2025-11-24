@@ -4,7 +4,6 @@ import type { Request, Response } from "express";
 
 import { query } from "../db/postgreSQL.ts";
 import { requireAuth } from "../middleware/auth.ts";
-import { validate } from "../middleware/validate.ts";
 import { profileSchema, updateProfileSchema } from "../validation/profile.ts";
 import { logger } from "../lib/logger.ts";
 import { addProfileDetails, updateProfileDetails, updateProfileSql } from "../db/query.js";

@@ -1,5 +1,5 @@
 // src/lib/tokens.ts
-import crypto from "crypto";
+import * as crypto from "crypto";
 
 export function generateTokenHex(bytes = 32) {
   return crypto.randomBytes(bytes).toString("hex"); // plain token for email

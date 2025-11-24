@@ -1818,3 +1818,53 @@
 {"level":30,"time":"2025-11-23T13:46:08.460Z","method":"POST","url":"/auth/logout","status":200,"responseTime":"7ms","msg":"HTTP POST /auth/logout"}
 {"level":30,"time":"2025-11-23T14:06:27.465Z","msg":"Running log retention cleanup..."}
 {"level":30,"time":"2025-11-23T14:06:27.466Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-23T14:10:12.196Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-23T14:10:12.197Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-23T14:14:08.824Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-23T14:14:08.825Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-23T14:16:00.874Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-23T14:16:00.874Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-23T14:18:15.955Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-23T14:18:15.956Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-23T14:24:02.145Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-23T14:24:02.147Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-23T14:24:23.139Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-23T14:24:23.140Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-23T14:24:34.765Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-23T14:24:34.767Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-23T14:24:54.024Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-23T14:24:54.025Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-23T14:26:57.548Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-23T14:26:57.549Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-24T03:51:30.864Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-24T03:51:30.864Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-24T03:51:31.813Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-24T03:51:31.814Z","msg":"Log retention cleanup complete."}
+{"level":30,"time":"2025-11-24T03:51:38.875Z","method":"GET","url":"/auth/me","status":304,"responseTime":"1121ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:51:38.947Z","method":"GET","url":"/auth/me","status":304,"responseTime":"68ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:51:41.222Z","method":"GET","url":"/auth/me","status":304,"responseTime":"70ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:51:41.289Z","method":"GET","url":"/auth/me","status":304,"responseTime":"61ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:51:52.937Z","method":"GET","url":"/auth/me","status":304,"responseTime":"60ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:51:52.998Z","method":"GET","url":"/auth/me","status":304,"responseTime":"59ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:52:06.572Z","method":"GET","url":"/auth/me","status":304,"responseTime":"64ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:52:06.637Z","method":"GET","url":"/auth/me","status":304,"responseTime":"62ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:52:22.976Z","method":"GET","url":"/auth/me","status":304,"responseTime":"80ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:52:23.038Z","method":"GET","url":"/auth/me","status":304,"responseTime":"59ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:52:24.705Z","method":"GET","url":"/auth/me","status":304,"responseTime":"65ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:52:24.772Z","method":"GET","url":"/auth/me","status":304,"responseTime":"64ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:52:25.054Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"193ms","msg":"HTTP GET /auth/admin/stats"}
+{"level":30,"time":"2025-11-24T03:52:25.228Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"172ms","msg":"HTTP GET /auth/admin/stats"}
+{"level":30,"time":"2025-11-24T03:53:44.665Z","method":"GET","url":"/auth/me","status":304,"responseTime":"444ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:53:44.850Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"171ms","msg":"HTTP GET /auth/admin/stats"}
+{"level":30,"time":"2025-11-24T03:53:45.025Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"174ms","msg":"HTTP GET /auth/admin/stats"}
+{"level":30,"time":"2025-11-24T03:53:47.234Z","method":"GET","url":"/auth/me","status":304,"responseTime":"59ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:53:47.429Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"177ms","msg":"HTTP GET /auth/admin/stats"}
+{"level":30,"time":"2025-11-24T03:53:47.614Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"183ms","msg":"HTTP GET /auth/admin/stats"}
+{"level":30,"time":"2025-11-24T03:54:10.239Z","method":"GET","url":"/auth/me","status":304,"responseTime":"58ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:54:10.455Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"171ms","msg":"HTTP GET /auth/admin/stats"}
+{"level":30,"time":"2025-11-24T03:54:10.652Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"188ms","msg":"HTTP GET /auth/admin/stats"}
+{"level":30,"time":"2025-11-24T03:54:52.244Z","method":"GET","url":"/auth/me","status":304,"responseTime":"494ms","msg":"HTTP GET /auth/me"}
+{"level":30,"time":"2025-11-24T03:54:52.441Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"181ms","msg":"HTTP GET /auth/admin/stats"}
+{"level":30,"time":"2025-11-24T03:54:52.627Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"184ms","msg":"HTTP GET /auth/admin/stats"}
+{"level":30,"time":"2025-11-24T03:55:04.542Z","msg":"User logged out"}
+{"level":30,"time":"2025-11-24T03:55:04.548Z","method":"POST","url":"/auth/logout","status":200,"responseTime":"18ms","msg":"HTTP POST /auth/logout"}

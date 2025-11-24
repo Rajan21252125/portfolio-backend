@@ -1,6 +1,6 @@
 // src/lib/emailTemplates.ts
-import fs from "fs/promises";
-import path from "path";
+import * as fs from "fs/promises";           // or: import { readFile } from "fs/promises";
+import * as path from "path";
 import { fileURLToPath } from "url";
 import { sendEmail } from "./email.ts"; // your nodemailer wrapper
 import { logger } from "./logger.ts";    // adjust path if needed

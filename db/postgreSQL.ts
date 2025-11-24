@@ -1,8 +1,6 @@
-import dotenv from "dotenv";
+import * as dotenv from "dotenv";
+import { Pool } from "pg";
 dotenv.config();
-
-import pg from "pg";
-const { Pool } = pg;
 
 // runtime imports done. Import types only for TS:
 import type { PoolClient, PoolConfig, QueryResult, QueryResultRow } from "pg";
