@@ -6,10 +6,23 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DIST = path.join(__dirname, '..', 'dist');
+function readTsconfigOutDir() {
+  const cfgPath = path.join(__dirname, '..', 'tsconfig.json');
+  if (!fs.existsSync(cfgPath)) return 'dist';
+  try {
+    const cfg = JSON.parse(fs.readFileSync(cfgPath, 'utf8'));
+    return cfg?.compilerOptions?.outDir || 'dist';
+  } catch (e) {
+    console.warn('Could not parse tsconfig.json, falling back to dist');
+    return 'dist';
+  }
+}
+
+const OUT = readTsconfigOutDir();
+const DIST = path.resolve(__dirname, '..', OUT);
 
 if (!fs.existsSync(DIST)) {
-  console.error('dist folder not found; run the build first');
+  console.error(`dist folder not found at "${DIST}"; run the build first`);
   process.exit(1);
 }
 
@@ -23,16 +36,13 @@ function walk(dir) {
     if (stat.isDirectory()) {
       walk(p);
     } else if (p.endsWith('.js') || p.endsWith('.mjs') || p.endsWith('.cjs')) {
-      let s = fs.readFileSync(p, 'utf8');
+      let original = fs.readFileSync(p, 'utf8');
+      let s = original;
 
-      // replace import/from and dynamic import(...) style
       s = s.replace(importRegex, (m, p1, p2, ext, p4) => `${p1}${p2}.js${p4}`);
-
-      // replace require('...') if present
       s = s.replace(requireRegex, (m, p1, p2, ext, p4) => `${p1}${p2}.js${p4}`);
 
-      // save only if changed
-      if (s !== fs.readFileSync(p, 'utf8')) {
+      if (s !== original) {
         fs.writeFileSync(p, s, 'utf8');
         console.log(`Patched imports in ${path.relative(DIST, p)}`);
       }
@@ -41,4 +51,4 @@ function walk(dir) {
 }
 
 walk(DIST);
-console.log('Done: fixed import extensions in dist');
+console.log(`Done: fixed import extensions in "${OUT}"`);
