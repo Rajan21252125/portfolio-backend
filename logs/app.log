@@ -1868,3 +1868,6 @@
 {"level":30,"time":"2025-11-24T03:54:52.627Z","method":"GET","url":"/auth/admin/stats","status":304,"responseTime":"184ms","msg":"HTTP GET /auth/admin/stats"}
 {"level":30,"time":"2025-11-24T03:55:04.542Z","msg":"User logged out"}
 {"level":30,"time":"2025-11-24T03:55:04.548Z","method":"POST","url":"/auth/logout","status":200,"responseTime":"18ms","msg":"HTTP POST /auth/logout"}
+{"level":30,"time":"2025-11-24T04:18:45.231Z","method":"GET","url":"/favicon.ico","status":404,"responseTime":"43ms","msg":"HTTP GET /favicon.ico"}
+{"level":30,"time":"2025-11-24T04:28:45.396Z","msg":"Running log retention cleanup..."}
+{"level":30,"time":"2025-11-24T04:28:45.397Z","msg":"Log retention cleanup complete."}
