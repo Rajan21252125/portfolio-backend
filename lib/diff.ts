@@ -1,6 +1,6 @@
 // src/lib/diff.ts
 
-import { logger } from "./logger.ts";
+import { logger } from "./logger.js";
 
 /**
  * diffObjects(oldObj, newObj)

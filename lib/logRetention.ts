@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { logger } from "./logger.ts";
+import { logger } from "./logger.js";
 
 const LOG_DIR = path.resolve("logs");
 const MAX_DAYS = 30; // delete files older than 30 days

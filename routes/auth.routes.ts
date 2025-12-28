@@ -3,13 +3,13 @@ import { Router } from "express";
 import type { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { query } from "../db/postgreSQL.ts";
-import { logger } from "../lib/logger.ts";
+import { query } from "../db/postgreSQL.js";
+import { logger } from "../lib/logger.js";
 import { adminNotificationInsert, getOtpByEmail, getUserByEmail, insertOTP, signUpQuery } from "../db/query.js";
-import { generateTokenHex, hashToken } from "../lib/token.ts";
-import { sendTemplatedEmail } from "../lib/emailTemplates.ts";
-import { requireAuth } from "../middleware/auth.ts";
-import { requireAdmin } from "../middleware/requireAdmin.ts";
+import { generateTokenHex, hashToken } from "../lib/token.js";
+import { sendTemplatedEmail } from "../lib/emailTemplates.js";
+import { requireAuth } from "../middleware/auth.js";
+import { requireAdmin } from "../middleware/requireAdmin.js";
 
 const router = Router();
 

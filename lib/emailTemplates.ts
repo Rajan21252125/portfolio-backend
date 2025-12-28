@@ -2,8 +2,8 @@
 import * as fs from "fs/promises";           // or: import { readFile } from "fs/promises";
 import * as path from "path";
 import { fileURLToPath } from "url";
-import { sendEmail } from "./email.ts"; // your nodemailer wrapper
-import { logger } from "./logger.ts";    // adjust path if needed
+import { sendEmail } from "./email.js"; // your nodemailer wrapper
+import { logger } from "./logger.js";    // adjust path if needed
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

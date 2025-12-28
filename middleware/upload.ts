@@ -1,7 +1,7 @@
 // src/middleware/upload.ts
 import multer from "multer";
 import type { Request } from "express";
-import { logger } from "../lib/logger.ts";
+import { logger } from "../lib/logger.js";
 
 // Use memory storage so files are available as Buffer (req.file.buffer)
 const storage = multer.memoryStorage();

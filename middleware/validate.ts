@@ -1,7 +1,7 @@
 // src/middleware/validate.ts
 import { z } from "zod";
 import type { Request, Response, NextFunction } from "express";
-import { logger } from "../lib/logger.ts";
+import { logger } from "../lib/logger.js";
 
 export const validate =
   (schema: z.ZodTypeAny) =>

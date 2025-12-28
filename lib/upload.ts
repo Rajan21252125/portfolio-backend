@@ -1,4 +1,4 @@
-import cloudinary from "./cloudinary.ts";
+import cloudinary from "./cloudinary.js";
 
 
 export const uploadBuffer = (buf: Buffer, options: any) =>

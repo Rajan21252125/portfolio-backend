@@ -1,6 +1,6 @@
 // src/middleware/errorLogger.ts
 import type { Request, Response, NextFunction } from "express";
-import { logger } from "../lib/logger.ts";
+import { logger } from "../lib/logger.js";
 
 export function errorLogger(err: any, req: Request, res: Response, next: NextFunction) {
   logger.error(

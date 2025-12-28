@@ -2,17 +2,17 @@
 import { raw, Router } from "express";
 import type { Request, Response } from "express";
 
-import { query } from "../db/postgreSQL.ts";
-import { requireAuth } from "../middleware/auth.ts";
-import { logger } from "../lib/logger.ts";
+import { query } from "../db/postgreSQL.js";
+import { requireAuth } from "../middleware/auth.js";
+import { logger } from "../lib/logger.js";
 import { addProjectDetails, deleteProjectSql, updateProjectDetails } from "../db/query.js";
-import { validate } from "../middleware/validate.ts";
-import { projectSchema, projectUpdateSchema } from "../validation/project.ts";
-import { uploadBuffer } from "../lib/upload.ts";
-import cloudinary from "../lib/cloudinary.ts";
-import { uploadMemory } from "../middleware/upload.ts";
-import { formatZodError } from "../lib/zodError.ts";
-import { diffObjects } from "../lib/diff.ts";
+import { validate } from "../middleware/validate.js";
+import { projectSchema, projectUpdateSchema } from "../validation/project.js";
+import { uploadBuffer } from "../lib/upload.js";
+import cloudinary from "../lib/cloudinary.js";
+import { uploadMemory } from "../middleware/upload.js";
+import { formatZodError } from "../lib/zodError.js";
+import { diffObjects } from "../lib/diff.js";
 
 const router = Router();
 

@@ -2,15 +2,15 @@
 import { Router } from "express";
 import type { Request, Response } from "express";
 
-import { query } from "../db/postgreSQL.ts";
-import { requireAuth } from "../middleware/auth.ts";
-import { profileSchema, updateProfileSchema } from "../validation/profile.ts";
-import { logger } from "../lib/logger.ts";
+import { query } from "../db/postgreSQL.js";
+import { requireAuth } from "../middleware/auth.js";
+import { profileSchema, updateProfileSchema } from "../validation/profile.js";
+import { logger } from "../lib/logger.js";
 import { addProfileDetails, updateProfileDetails, updateProfileSql } from "../db/query.js";
-import cloudinary, { uploadBuffer } from "../lib/cloudinary.ts";
-import { uploadMemory } from "../middleware/upload.ts";
-import { diffObjects } from "../lib/diff.ts";
-import { formatZodError } from "../lib/zodError.ts";
+import cloudinary, { uploadBuffer } from "../lib/cloudinary.js";
+import { uploadMemory } from "../middleware/upload.js";
+import { diffObjects } from "../lib/diff.js";
+import { formatZodError } from "../lib/zodError.js";
 
 const router = Router();
 
