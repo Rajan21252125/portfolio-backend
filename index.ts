@@ -12,8 +12,8 @@ import type { Request, Response, NextFunction } from "express";
 import profileRoutes from "./routes/profile.routes.js";
 import projectRoutes from "./routes/projects.routes.js";
 import authRoutes from "./routes/auth.routes.js";
-import { requestLogger } from "./middleware/requestLogger";
-import { errorLogger } from "./middleware/errorLogger";
+import { requestLogger } from "./middleware/requestLogger.js";
+import { errorLogger } from "./middleware/errorLogger.js";
 
 
 const app = express();
