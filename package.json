@@ -2,15 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "type": "module",
   "scripts": {
-    "start": "node --watch index.js",
-    "dev": "node --loader ts-node/esm server/index.ts",
-    "migrate": "node ./db/migrate.js",
-    "build": "npm ci --include=dev --no-audit --prefer-offline && echo '== CWD ==' && pwd && echo '== LS root ==' && ls -la && echo '== NODE version ==' && node -v && echo '== NPM version ==' && npm -v && echo '== RUN tsc (outDir=dist) ==' && npx tsc -p tsconfig.json --outDir dist --listEmittedFiles --pretty || true && echo '== LS dist after tsc ==' && ls -la dist || true && echo '== run fixer (if dist exists) ==' && node script/fix-extensions.js || true && echo '== ls dist final ==' && ls -la dist || true"
-    ,
-    "build-run": "npm run build && node ./dist/index.js"
+    "dev": "tsx watch index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "migrate": "node ./db/migrate.js"
   },
   "keywords": [],
   "author": "Rajan Gupta",
@@ -38,14 +36,16 @@
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.5",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/multer": "^2.0.0",
-    "@types/node": "^24.10.1",
+    "@types/node": "^24.10.4",
     "@types/nodemailer": "^7.0.4",
     "@types/pino": "^7.0.4",
     "pino-pretty": "^13.1.2",
     "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }
