@@ -18,21 +18,13 @@ import { cleanOldLogs } from "./lib/logRetention.ts";
 
 const app = express();
 
-// run immediately at startup
-cleanOldLogs();
-
-// run cleanup every day at 03:00 AM
-cron.schedule("0 3 * * *", () => {
-  cleanOldLogs();
-});
-
 // ===== MIDDLEWARE =====
-app.use(helmet()); // security headers
+app.use(helmet());
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
+  origin: process.env.CLIENT_URL,
   credentials: true,
 }));
-app.use(express.json({ limit: "1mb" })); // prevent big payload attacks
+app.use(express.json({ limit: "1mb" }));
 app.use(cookieParser());
 
 // ===== ROUTES =====
@@ -40,18 +32,13 @@ app.get("/", (req, res) => {
   res.send("Portfolio Backend Running 🚀");
 });
 
-// === Request logging ===
 app.use(requestLogger);
 
-
-// === Error logging ===
-app.use(errorLogger);
-
-
-// prefix routes
 app.use("/auth", authRoutes);
 app.use("/profile", profileRoutes);
 app.use("/projects", projectRoutes);
+
+app.use(errorLogger);
 
 // ===== GLOBAL ERROR HANDLER =====
 app.use((err, req, res, next) => {
@@ -59,8 +46,14 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: "Internal Server Error" });
 });
 
-// ===== START SERVER =====
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port http://localhost:${PORT}`);
-});
+
+const isVercel = process.env.VERCEL === "1";
+
+if (!isVercel) {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`🚀 Local server running on http://localhost:${PORT}`);
+  });
+}
+
+export default app;

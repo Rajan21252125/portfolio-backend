@@ -1,0 +1,31 @@
+{
+  "version": 2,
+
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+
+  "crons": [
+    {
+      "path": "/api/cron/cleanup",
+      "schedule": "0 3 * * *",
+      "headers": {
+        "authorization": "Bearer ${CRON_SECRET}"
+      }
+    }
+  ]
+}
