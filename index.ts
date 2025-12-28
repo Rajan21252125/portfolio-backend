@@ -9,9 +9,9 @@ import type { Request, Response, NextFunction } from "express";
 
 
 // import your routes
-import profileRoutes from "./routes/profile.routes";
-import projectRoutes from "./routes/projects.routes";
-import authRoutes from "./routes/auth.routes";
+import profileRoutes from "./routes/profile.routes.js";
+import projectRoutes from "./routes/projects.routes.js";
+import authRoutes from "./routes/auth.routes.js";
 import { requestLogger } from "./middleware/requestLogger";
 import { errorLogger } from "./middleware/errorLogger";
 
