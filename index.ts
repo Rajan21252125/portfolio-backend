@@ -46,14 +46,7 @@ app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
   res.status(500).json({ message: "Internal Server Error" });
 });
 
-
-const isVercel = process.env.VERCEL === "1";
-
-if (!isVercel) {
-  const PORT = process.env.PORT || 5000;
-  app.listen(PORT, () => {
-    console.log(`🚀 Local server running on http://localhost:${PORT}`);
-  });
-}
-
-export default app;
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`🚀 Local server running on http://localhost:${PORT}`);
+})
